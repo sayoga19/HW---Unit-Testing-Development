@@ -21,7 +21,7 @@ build:
     - docker build
       -t apitodo-cicd:latest
       --build-arg PORT=$PORT
-      --no-cache
+      --no-cache .
     - echo "Tagging image..."
     - docker tag apitodo-cicd:latest $REPOSITORY_URL:latest
     - echo "Pushing image..."
